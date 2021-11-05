@@ -8,16 +8,17 @@ const btnGuardar = document.querySelector("#btn_guardar");
 
 // recuperar cuerpo de la tabla
 const listaAlumnos = document.querySelector("#lista_alumnos tbody");
+
 btnGuardar.addEventListener("click", function (e) {
     e.preventDefault();
-    // crear un objeto de tipo alumno
+    // crear un objeto de hacierndo referencia al alumno
     const alumno = {
         nocuenta: txtCuenta.value,
         nombre: txtNombre.value.toUpperCase(),
         carrera: optCarrera.value.toUpperCase(),
         promedio: Number(txtPromedio.value)
     }
-    // agregar al alumo a la tabla mencionada 
+    // agregar al alumo a la tabla
     const renglon = document.createElement("tr");
     renglon.innerHTML = `
         <td>
